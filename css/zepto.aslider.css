@@ -7,23 +7,8 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
-
-}
-.aslider[data-aslider-direction="left"] {
     top: 0;
     left: 0;
-}
-.aslider[data-aslider-direction="right"] {
-    right: 0;
-    top: 0;
-}
-.aslider[data-aslider-direction="top"] {
-    top: 0;
-    left: 0;
-}
-.aslider[data-aslider-direction="bottom"] {
-    bottom: 0;
-    left: 0;    
 }
 /*
 .aslider .wrapper>* {
