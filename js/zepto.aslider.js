@@ -19,7 +19,7 @@
          * @return {null}
          */
         this.asideSlideOut = function($el) {
-            if ($el.is(":visible")) {
+            if ($el.css("display")!="none") {
                 var isFade = $el.data("aslider-fade");
                 if (isFade === "" || isFade || $el.isFade) {
                     $el.find(".bg").removeClass("fade_in");
