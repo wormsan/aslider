@@ -1,0 +1,136 @@
+/* 
+* @Author: zhaoye-ds1
+* @Date:   2015-07-22 17:01:45
+* @Last Modified by:   zhaoye-ds1
+* @Last Modified time: 2015-08-13 13:13:55
+*/
+* {
+    font: inherit;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 100px;
+}
+body {
+    font-size: 14px;
+}
+
+.slider1 .wrapper {
+    height: 60%;
+}
+.aslider section.wrapper {
+    box-sizing: border-box;
+    padding: .10rem;
+    padding-bottom: 1rem;
+}
+ul li {
+    height: .8rem;
+    line-height: .8rem;
+    color: #fff;
+    background: #f16666;
+    border-bottom: .01rem solid #d7390f;
+    text-align: center;
+}
+dl dt {
+    height: .5rem;
+    line-height: .5rem;
+    color: #fff;
+    border-bottom: 1px solid #2bd990;
+    font-size: 24px;
+    text-align: center;
+    background-color: #b4f2c2;
+    color: #17a76a;
+}
+dl dd {
+    line-height: .4rem;
+    height: .8rem;
+    padding-left: .1rem;
+    margin-bottom: .05rem;
+    color: #fff;
+    background-color: #6de687;
+}
+button {
+    padding: .2rem;
+    margin: .1rem;
+    line-height: 1.3em;
+    border-radius: .03rem;
+}
+
+.bgc1 {
+    background: #e73737;
+}
+
+.bgc2 {
+    background: #a7d1d1;
+}
+
+.bgc3 {
+    background: #2bd990;
+}
+
+.aslider .box {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    right: 0;
+}
+.aslider[data-aslider="slider2"] .wrapper{
+    width: 90%;
+}
+.close.btn {
+    position: absolute;
+    top: .1rem;
+    right: .1rem;
+    width: .3rem;
+    line-height: .3rem;
+    border-radius: .3rem;
+    border: .01rem solid #17a76a;
+}
+
+section {
+    background-color: #fff;
+}
+
+h2 {
+    padding-left: .1rem;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+h3 {
+    padding-left: .1rem;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+p {
+    padding-left: .1rem;
+    text-indent: 2em;
+    line-height: 2;
+}
+
+strong {
+    font-size: .8em;
+    font-weight: bold;
+}
+
+section button {
+    position: absolute;
+    bottom: 0;
+}
+
+section button.right {
+    right: 0;
+}
+.overflow {
+    height: 10rem;
+    padding: .5rem;
+    background-color: #999;
+}
+#info3 {
+    height: 50%;
+}
+#info3 .wrapper {
+    background-color: #999;
+}
