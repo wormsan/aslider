@@ -129,6 +129,8 @@ section button.right {
     background-color: #999;
 }
 #info3 {
+    top: auto;
+    bottom: 0;
     height: 50%;
 }
 #info3 .wrapper {
