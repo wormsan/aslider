@@ -1,9 +1,4 @@
-/* 
-* @Author: zhaoye-ds1
-* @Date:   2015-07-22 17:01:45
-* @Last Modified by:   zhaoye-ds1
-* @Last Modified time: 2015-08-13 13:13:55
-*/
+/*style for demo*/
 * {
     font: inherit;
     padding: 0;
@@ -16,10 +11,10 @@ body {
     font-size: 14px;
 }
 
-.slider1 .wrapper {
+.slider1 .asilder_wrapper {
     height: 60%;
 }
-.aslider section.wrapper {
+.aslider section.asilder_wrapper {
     box-sizing: border-box;
     padding: .10rem;
     padding-bottom: 1rem;
@@ -75,7 +70,7 @@ button {
     -webkit-box-pack: center;
     right: 0;
 }
-.aslider[data-aslider="slider2"] .wrapper{
+.aslider[data-aslider="slider2"] .asilder_wrapper{
     width: 90%;
 }
 .close.btn {
@@ -133,6 +128,6 @@ section button.right {
     bottom: 0;
     height: 50%;
 }
-#info3 .wrapper {
+#info3 .asilder_wrapper {
     background-color: #999;
 }

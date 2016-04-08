@@ -14,20 +14,43 @@
     <script type="text/javascript" src="./js/zepto.fx.js"></script>
     <script type="text/javascript" src="./js/zepto.fx_methods.js"></script>
     <script type="text/javascript" src="./js/zepto.aslider.js"></script>
+    <script type="text/javascript">
+        //aslider自动绑定页面中的slider和其入口
+        //若有动态生成的slider，如通过ajax创建的，则执行$.aslider.rebind()
+        //重新绑定
+        $(function(){
+            $('#dynamic').click(function(){
+                var tpl =    '<aside class="aslider " data-aslider="dynamic" data-aslider-fade>'
+                        +       '<div class="asilder_wrapper bgc2 ">'
+                        +           '<div class="slider box close">'
+                        +               '<p>动态生成的slider</p>'
+                        +           '</div>'
+                        +       '</div>'
+                        +    '</aside>'
+                $(document.body).append(tpl)
+                $.aslider.rebind()
+                $('#dynamic').attr('disabled','disabled')
+                $('#realDynamic').attr('disabled',null)
+            })
+        })
+    </script>
 </head>
 <body>
     <nav></nav>
     <!-- 定义侧滑的入口对象 -->
     <button data-aslider-in="1000|fade|bottom">演示</button>
     <button data-aslider-in="info|fade">说明</button>
+    <button id="dynamic">动态添加slider并绑定</button>
+    <button id="realDynamic" disabled="disabled" data-aslider-in="dynamic|fade|bottom">动态绑定后点我有效果</button>
     <div class="overflow">演示解决body长度超出window时，slider的冲突问题</div>
     <button data-aslider-in="1000|fade|bottom">演示</button>
+
     <!-- 定义一个侧滑侧边栏 -->
     <aside class="slider1 aslider" data-aslider="1000">
         <!-- 定义一个包裹器，用来进行滑动特效和上下拖动特效 -->
-        <div class="wrapper bgc1">
+        <div class="asilder_wrapper bgc1">
             <!--如果需要自定义一个滚动区域，就给一个div加入scroll类,给他的子包裹器加入slider类即可-->
-            <!--如果aslider下没有slider类，那么会自动创建slider包裹器，并把wrapper下的所有dom放到slider下-->
+            <!--如果aslider下没有slider类，那么会自动创建slider包裹器，并把asilder_wrapper下的所有dom放到slider下-->
             <!--如果没有scroll，那么会自动为slider创建一个上层scroll-->
             <!--建议手写slider和scroll，避免未知bug-->
             <h4>tttt</h4>
@@ -59,7 +82,7 @@
     </aside>
     <!-- 这是一个背景渐变的例子 -->
     <aside class="aslider close" data-aslider="slider2" data-aslider-fade>
-        <div class="wrapper bgc2">
+        <div class="asilder_wrapper bgc2">
             <div class="slider box ">
                 <button data-aslider-in="slider3">next</button>
                 <p>fade特效，点击左侧透明区域关闭</p>
@@ -68,7 +91,7 @@
     </aside>
     <!-- 这是一个全屏的例子 -->
     <aside class="aslider" data-aslider="slider3" data-aslider-fade>
-        <dl class="wrapper bgc3">
+        <dl class="asilder_wrapper bgc3">
             <dt>
                 <h2>点右侧x关闭</h2>
                 <span class="close btn">X</span>
@@ -82,14 +105,14 @@
         </dl>
     </aside>
     <article class="aslider" data-aslider="info">
-        <section class="wrapper close">
+        <section class="asilder_wrapper close">
             <div class="slider">
                 <h2>css类，dom嵌套规则</h2>
-                <p>一个侧边栏必须由两层dom嵌套，外侧元素必须带有名为<strong>aslider</strong>的css类，内层元素必须带有名为<strong>wrapper</strong>的css类</p>
+                <p>一个侧边栏必须由两层dom嵌套，外侧元素必须带有名为<strong>aslider</strong>的css类，内层元素必须带有名为<strong>asilder_wrapper</strong>的css类</p>
                 <p>标签不带有任何限制</p>
                 <h3>.aslider</h3>
                 <p>这个css类，是滑动侧边栏的根类</p>
-                <h3>.wrapper</h3>
+                <h3>.asilder_wrapper</h3>
                 <p>这个css类，是滑动侧边栏内容的包裹器，具体内容在这里填充，并且其实现了滑动特效。可以改变其大小，如宽度，实现各种风格的侧边栏</p>
                 <h3>.close</h3>
                 <p>加入了close的类，点击后就会关闭滑动侧边栏</p>
@@ -120,7 +143,7 @@
         </section>
     </article>
     <article class="aslider" data-aslider="info2">
-        <section class="wrapper close">
+        <section class="asilder_wrapper close">
             <div class="slider">
                 <h2>data属性</h2>
                 <h3>data-aslider属性<strong>（必填）</strong></h3>
@@ -135,7 +158,7 @@
         </section>
     </article>
     <article id="info3" class="aslider" data-aslider="info3">
-        <section class="wrapper close">
+        <section class="asilder_wrapper close">
             <div class="slider">
                 <p>也可以通过控制aslider的宽高，达到滑动侧边栏不影响底层的效果</p>
             </div>
